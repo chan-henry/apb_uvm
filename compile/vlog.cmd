@@ -1,0 +1,1 @@
+ -o /home/henryc/udemy/UVMReference/apb_uvm/compile -lc /home/henryc/udemy/UVMReference/apb_uvm/library.cfg -fl /home/henryc/udemy/UVMReference/apb_uvm/library.cfg -pli /home/henryc/Aldec/Riviera-PRO-2017.02-x64/bin/libsystf.so -work apb_uvm +incdir+"/home/henryc/Aldec/Riviera-PRO-2017.02-x64/vlib/uvm-1.2/src" -l uvm_1_2 apb_pkg.sv top.sv
