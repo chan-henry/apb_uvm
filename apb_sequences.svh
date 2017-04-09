@@ -4,6 +4,8 @@ class apb_sequence extends uvm_sequence#(apb_transaction);
 
 	`uvm_object_utils(apb_sequence)
 
+	int unsigned count = 5000; // Knob for # of transactions
+
 	function new(string name="");
 		super.new(name);
 	endfunction: new
@@ -11,7 +13,7 @@ class apb_sequence extends uvm_sequence#(apb_transaction);
 	task body();
 		apb_transaction tx; // Create transaction handle
 
-		repeat(10) begin: tx_create_loop
+		repeat(count) begin: tx_create_loop
 			tx = apb_transaction::type_id::create("tx", .contxt(get_full_name()));
 			start_item(tx);
 			assert(tx.randomize());

@@ -1,2 +1,11 @@
   CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:584}
   CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}
+  CREATE_STREAM @0 {NAME:apb_seq T:Transactions SCOPE:uvm_test_top.apb_env_inst.apb_agent_inst.apb_sequencer_inst STREAM:613}

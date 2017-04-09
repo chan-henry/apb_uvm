@@ -30,10 +30,15 @@ class apb_monitor extends uvm_monitor;
 			@(my_apb_if.slave_cb);
 				phase.raise_objection(.obj(this),.description(get_name()));
 				tx = apb_transaction::type_id::create(.name("tx"));
-				tx.paddr = my_apb_if.paddr;
+				tx.paddr	=	my_apb_if.paddr;
+				tx.pwdata	=	my_apb_if.pwdata;
+				tx.prdata	=	my_apb_if.prdata;
+				tx.psel		=	my_apb_if.psel;
+				tx.penable	=	my_apb_if.penable;
+				tx.pwrite	=	my_apb_if.pwrite;
 				//TODO: assign more signals
 				@(my_apb_if.slave_cb)
-					//tx.prdata = my_apb_if.slave_cb.prdata;
+					tx.prdata = my_apb_if.prdata;
 				ap.write(tx);
 				phase.drop_objection(.obj(this),.description(get_name()));
 		end

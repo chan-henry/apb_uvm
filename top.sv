@@ -18,21 +18,23 @@ interface apb_if( input logic clk );
 		input	paddr, psel, penable, pwrite, pwdata;
 	endclocking: slave_cb
 
-	modport master(clocking master_cb);
-	modport slave(clocking slave_cb);
+	modport master(input clk, prdata, output paddr, psel, penable, pwrite, pwdata);
+	modport slave(input clk, paddr, psel, penable, pwrite, pwdata, output prdata);
 endinterface: apb_if
 
 import apb_pkg::*;
 import uvm_pkg::*;
 
 module apb_slave_bfm(apb_if.slave slave_if);
-//
-//	logic [31:0] data;
-//
-//	always@(posedge slave_if.clk) begin: apb_slave_bfm_main
-//		slave_if.slave.prdata <= randomize(data);
-//	end: apb_slave_bfm_main
-//
+
+	logic [31:0] data;
+
+	always@(posedge slave_if.clk) begin: apb_slave_bfm_main
+		randomize(data);
+		slave_if.prdata = data;
+		//$display("Variable \"slave_if.prdata\" from apb_slave_bfm is: %0h: ", slave_if.prdata);
+	end: apb_slave_bfm_main
+
 endmodule: apb_slave_bfm
 
 module top;
